@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+h2 {
+    
+    font-weight: 250 !important;
+}
+
+h5 {
+    font-size: 1.03em !important;
+    font-weight: 370 !important;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 250;
+
+}
+
+/* Tela de Login - início */ 
+.st-section {
+    padding: 3em 0;
+    display: block;
+}
+
+.login-wrap {
+    position: relative;
+}
+/* icon do cadastro  */
+.field-icon {
+    position: absolute;
+    top: 31%;
+    right: 26px;
+    
+}
+/* icon do login  */
+.field-icon1 {
+    position: absolute;
+    top: 29%;
+    right: 26px;
+    
+}
+
+@media screen and (max-width: 800px) {
+    .field-icon1{
+        position: absolute;
+        top: 27%;
+        right: 20px;
+    }
+    
+}
+
+
+.btn {
+    max-width: 380px;
+}
+
+.btn-color {
+    color: white !important;
+    background-color: rgb(241, 158, 56) !important;
+    border-color: rgb(241, 158, 56)  !important;
+}
+
+
+.checkbox-container {
+    position: absolute;
+    padding-left: 24px;
+    cursor: pointer;
+  
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: darkgrey;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: rgb(255, 176, 80);
+}
+
+
+.checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: grey;
+}
+
+.checkmark:after {
+    content:"";
+    position: absolute;
+    display:none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display:block;
+}
+
+.container .checkmark:after {
+    left: 5px;
+    top: 3px; 
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+/* Tela de Login - fim */ 
+
+/* Tela de usuário - início */ 
+
+.img-style {
+    border-radius: 50%; 
+    
+}
+
+.input-style {
+    width: 100%;
+    height: 24px;
+}
+
+/* Tela de usuário - fim */
+
+/* Tela de index - inicio */
+.container-nav {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    max-width: 1050px;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    
+}
+
+.brand-color {
+    color: darkorange;
+}
+
+.brand-color:hover {
+    color: rgb(252, 159, 46);
+}
+
+/* Tela de index - fim */
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.bg-grey {
+    background-color: grey;
+}
+
