@@ -29,12 +29,12 @@ const req = require('express/lib/request');
 var users = []
 
 
-mysql.query(`select * from usuarios`, (err, result, fields)=> {
+mysql.query(`select * from user`, (err, result, fields)=> {
     if (err) throw err;
-    users = JSON.parse(JSON.stringify(result))
+    user = JSON.parse(JSON.stringify(result))
     
-    console.log(users)
-})
+    console.log(user)
+}) 
 
 
 
