@@ -19,8 +19,8 @@ app.use('/js', express.static(__dirname + 'public/js'))
 
 const initializePassport = require('./passport-config')
 initializePassport(passport, 
-    email => users.find(user => user.email === email),
-    id => users.find(user => user.id === id)
+    email => user.find(user => user.email === email),
+    id => user.find(user => user.id === id)
     )
 
 const mysql = require('./db_connection');
@@ -55,7 +55,7 @@ app.engine('html', require('ejs').renderFile);
 
 
 app.get('/', checkAuthenticated, (req, res) => {
-    res.render('index.ejs', {name: req.user.nome})
+    res.render('index.ejs', {name: req.user.username})
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -78,7 +78,7 @@ app.get('/register', checkNotAuthenticated, (req, res) => {
 app.post('/register', checkNotAuthenticated, async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        let sql = `INSERT INTO usuarios VALUES (default, '${req.body.name}', '${req.body.email}', '${hashedPassword}')`
+        let sql = `INSERT INTO user VALUES (default, '${req.body.name}', '${req.body.email}', '${hashedPassword}', default)`
         mysql.query(sql, (err) => {
             if(err) throw err;
            
