@@ -1,4 +1,4 @@
 .env
-
+db_connection.js
 # dependencies
 node_modules
